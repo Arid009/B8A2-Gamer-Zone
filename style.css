@@ -1,11 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap');
 *{
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
 }
 body{
-    /* padding: 0 150px; */
+    padding: 0 150px;
     font-family: work sans;
 }
 
@@ -16,7 +15,7 @@ nav{
     align-items: center;
     /* max-width: 1400px; */
     /* min-height: 400px; */
-    padding: 20px 150px;
+    /* padding: 20px 150px; */
 }
 .nav-title{
     display: flex;
@@ -65,7 +64,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 150px;
+    /* padding: 0 150px; */
 }
 .banner-description{
     width: 50%;
@@ -129,7 +128,7 @@ nav{
 
 /* online games section starts */
 .online-games{
-    padding: 0 150px;
+    /* padding: 0 150px; */
 }
 .online-games-description h1{
     color: #0B0223;
@@ -164,6 +163,47 @@ nav{
 .cards p{
     padding: 0 30px;
 }
+.main-card{
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: #000000;
+
+}
+.main-card:hover .overlay{
+    opacity: 1;
+}
+.icon, .content{
+    color: white;
+    font-size: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    /* display: block; */
+}
+.content{
+    font-size: 20px;
+    top: 60%;
+}
+.image{
+    width: 100%;
+    height: auto;
+}
+.fa-solid:hover{
+    color:#eee;
+}
 
 /* FTP SECTION STARTS */
 .FTP-section {
@@ -172,7 +212,7 @@ nav{
     align-items: center;
     margin-top: 100px;
     text-align: right;
-    padding: 0 150px;
+    /* padding: 0 150px; */
 }
 
 .FTP-img{
@@ -208,9 +248,11 @@ nav{
     gap: 20px;
     justify-content: center;
     align-content: center;
-    padding: 0 150px;
+    /* padding: 0 200px; */
 }
-.tags{
+.tags button:hover{
+    color: #FF42A5;
+    border: 1px solid #FF42A5;
     
 }
 .tags img{
@@ -224,18 +266,22 @@ nav{
     border-radius: 50px;
     border: none;
     gap: 10px;
+    /* padding-right: 15px; */
 }
 .tags span{
     font-weight: 600;
-    
+    font-size: 16px;
 }
+
 
 /* footer section starts here */
 footer{
     background-color: #0B0223;
-    margin: 50px auto;
-    padding-top:  100px;
-    padding-bottom:  100px;
+    /* margin: 50px auto; */
+    margin: 70px -150px 10px;
+    /* padding: 0; */
+    padding-top:  70px;
+    padding-bottom:  110px;
 
     color: rgba(255, 255, 255, 0.60);
     text-align: center;
@@ -255,23 +301,46 @@ footer{
 .footer-title p{
     font-size: 2.1rem;
     font-weight: 700;
+    color: white;
 }
 footer > p{
     font-weight: 500;
 }
-.span-tags{
+.list-tags ul{
     display: flex;
-    
     justify-content: center;
-    margin-bottom: 40px;
     align-items: center;
+    flex-wrap: wrap;
 }
-.span-tags p{
-    margin-right: 40px;
+.list-tags li{
+    list-style: none;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+.list-tags a{
+    text-decoration: none;
     color: white;
-    font-weight: 600;
+    text-align: center;
+    
 }
-
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.btn-container a{
+    color: white;
+    
+}
+.btn-container .fa-brands{
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 
 @media screen and (max-width: 576px) {
@@ -280,6 +349,9 @@ footer > p{
     }
     .banner-container{
         flex-direction: column-reverse;
+    }
+    .tag-section{
+        margin-bottom: 20px;
     }
     .banner-description{
         margin: 0.1px;
@@ -314,6 +386,7 @@ footer > p{
         text-align: center;
         
     }
+    
     .FTP-img{
         width: 100%;
         position: relative;
@@ -330,7 +403,12 @@ footer > p{
     .FTP-description{
         text-align: center;
     }
-    
+    .list-tags ul{
+        margin-left: -40px;
+    }
+    footer{
+        margin: 0 -15px;
+    }
 }
 @media screen and (min-width: 576px) and (max-width: 992px) {
     nav,.nav-menus ul,.FTP-section{
