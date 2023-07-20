@@ -63,23 +63,19 @@ nav{
 /* banner section starts here */
 .banner-container{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     /* padding: 0 150px; */
 }
+
 .banner-description{
     width: 50%;
-    background-image: url(images/Group\ 14.png);
-    /* margin: auto; */
-    background-size: 800px;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 500px;
-    margin-left: -400px;
-    padding-left: 300px;
+    
+    /* border: 1px solid; */
+   
     /* margin-right: 100px; */
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     /* min-height: 400px; */
 }
@@ -94,13 +90,14 @@ nav{
 }
 .banner-img img{
     width: 100%;
-    margin-left: 200px;
+    /* margin-left: 200px; */
 }
 .banner-description h1{
     color: #0B0223;
     font-size: 2rem;
     font-weight: 600;
 }
+
 .banner-description span{
     font-size: 4.25rem;
     background: linear-gradient(to bottom,#F948B2,#8758F1);
@@ -108,6 +105,11 @@ nav{
     -webkit-background-clip: text;
     
 }
+/* #banner {
+    background-image: url(./images/banner-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+} */
 .banner-description ul{
     margin-top: -10px;
     margin-bottom: 30px;
@@ -163,16 +165,21 @@ nav{
     display: grid;
     /* border: 1px solid; */
     margin: 50px auto 0;
-    
+    gap: 10px;
     grid-template-columns: repeat(4,1fr);
+}
+.cards{
+    /* border: 1px solid; */
+    
+    
 }
 .cards img{
     display: block;
     width: 80%;
     margin: 0 auto;
 }
-.cards p{
-    padding: 0 30px;
+.cards > p{
+    width: 270px;
 }
 .main-card{
     position: relative;
@@ -188,25 +195,26 @@ nav{
     opacity: 0;
     transition: .3s ease;
     background-color: #000000;
-
+    border-radius: 10px;
+    border: 2px solid #FF42A5;
 }
 .main-card:hover .overlay{
     opacity: 1;
 }
 .icon, .content{
     color: white;
-    font-size: 70px;
+    font-size: 32px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     text-align: center;
     /* display: block; */
 }
 .content{
-    font-size: 20px;
+    font-size: 15px;
     top: 60%;
+    color: #FF42A5;
 }
 .image{
     width: 100%;
