@@ -118,6 +118,10 @@ nav{
 .banner-content{
 
 }
+.banner-btn{
+    display: flex;
+    justify-content: space-around;
+}
 
 
 .btn-primary{
